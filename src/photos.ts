@@ -1,33 +1,41 @@
-/** 表示順に並べた写真データ（撮影：池田泰延／出典：README.md） */
+/** 表示順に並べた写真データ（撮影：池田泰延） */
 export const photos = [
   {
-    title: "Downtown I",
-    src: "./photos/01.webp",
-    description: "Office towers in downtown Los Angeles, photographed at night.",
+    title: "Galeries Lafayette",
+    src: "./photos/P3171108.avif",
+    description: "The stained-glass dome and ornate balconies inside Galeries Lafayette.",
   },
   {
-    title: "Griffith Observatory",
-    src: "./photos/02.jpg",
-    description: "Downtown Los Angeles seen from Griffith Observatory.",
+    title: "Paris Rooftops",
+    src: "./photos/P3171112.avif",
+    description:
+      "Paris rooftops with the Palais Garnier in the foreground and the Eiffel Tower in the distance.",
   },
   {
-    title: "Downtown II",
-    src: "./photos/03.webp",
-    description: "Illuminated towers and construction cranes above the surrounding neighborhoods.",
+    title: "Mont Saint-Michel",
+    src: "./photos/P3233004.avif",
+    description: "Mont Saint-Michel rising above the exposed tidal flats under a blue sky.",
   },
   {
-    title: "Downtown III",
-    src: "./photos/04.jpg",
-    description: "An elevated view of downtown blocks and the street grid beyond.",
+    title: "Hôtel de Ville",
+    src: "./photos/P3304136.avif",
+    description: "The ornate facade and clock tower of the Paris city hall framed by trees.",
   },
   {
-    title: "Downtown IV",
-    src: "./photos/05.jpg",
-    description: "A dark office tower above a grid of brightly lit downtown streets.",
+    title: "Eiffel Tower at Night",
+    src: "./photos/P3325232.avif",
+    description:
+      "The illuminated Eiffel Tower beside the Seine, with light trails from passing boats.",
   },
   {
-    title: "Downtown street",
-    src: "./photos/06.jpg",
-    description: "Red and white light trails along a downtown street.",
+    title: "Seine at Night",
+    src: "./photos/P3325234.avif",
+    description:
+      "Golden reflections and boat light trails on the Seine beneath an illuminated bridge.",
+  },
+  {
+    title: "Eiffel Tower at Sunset",
+    src: "./photos/P3335279.avif",
+    description: "The Eiffel Tower and the Seine beneath a colorful sunset sky.",
   },
 ];
