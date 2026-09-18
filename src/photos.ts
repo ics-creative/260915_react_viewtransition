@@ -34,8 +34,8 @@ export const photos = [
       "Golden reflections and boat light trails on the Seine beneath an illuminated bridge.",
   },
   {
-    title: "Eiffel Tower at Sunset",
+    title: "Eiffel Tower at Sunrise",
     src: "./photos/P3335279.avif",
-    description: "The Eiffel Tower and the Seine beneath a colorful sunset sky.",
+    description: "The Eiffel Tower and the Seine beneath a colorful sunrise sky.",
   },
 ];

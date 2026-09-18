@@ -9,7 +9,7 @@ type GalleryProps = {
 /** 一覧画面 */
 export const Gallery = ({ onSelect }: GalleryProps) => (
   <main>
-    <h1>Los Angeles</h1>
+    <h1>Paris</h1>
     <div className="photos">
       {photos.map((photo, index) => (
         <button key={photo.src} onClick={() => onSelect(index)}>
