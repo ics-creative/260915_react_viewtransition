@@ -1,0 +1,126 @@
+:root {
+  font-family: sans-serif;
+  color: black;
+  background: white;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 24px;
+}
+button {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: none;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 16px;
+  button {
+    img {
+      outline: 6px solid transparent;
+      outline-offset: -6px;
+      transition: outline-color 200ms;
+    }
+    @media (hover: hover) {
+      &:hover img {
+        outline-color: #111;
+      }
+    }
+  }
+  span {
+    display: block;
+    padding-block-start: 12px;
+    font-size: 0.875rem;
+  }
+  @media (width >= 760px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (width >= 1200px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+figure {
+  margin: 0;
+  figcaption {
+    padding-block-start: 16px;
+  }
+  p {
+    margin: 8px 0 0;
+    font-size: 0.875rem;
+  }
+}
+nav {
+  display: flex;
+  gap: 8px;
+  padding-block-end: 24px;
+  button {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #111;
+    background: #fff;
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    transition: 0.2s;
+    &:first-child {
+      margin-inline-end: auto;
+    }
+    &:hover {
+      color: #fff;
+      background: #111;
+    }
+  }
+}
+/* ホバー枠の拡大を防ぐため、切り替え前の画像を隠す */
+::view-transition-old(.photo) {
+  display: none;
+}
+::view-transition-new(.photo) {
+  /* 写真はフェードさせず、位置と大きさだけを変える */
+  animation-name: none;
+}
+/* スライド中のはみ出しを隠す */
+::view-transition-group(.slide-next),
+::view-transition-group(.slide-prev) {
+  overflow: clip;
+}
+::view-transition-group(.slide-next) {
+  --direction: 1;
+}
+::view-transition-group(.slide-prev) {
+  --direction: -1;
+}
+/* 時間とイージングはブラウザー標準 */
+::view-transition-new(.slide-next),
+::view-transition-new(.slide-prev) {
+  animation: slide-in 0.5s;
+}
+::view-transition-old(.slide-next),
+::view-transition-old(.slide-prev) {
+  animation: slide-out 0.5s;
+}
+@keyframes slide-in {
+  from {
+    translate: calc(var(--direction) * 100%) 0;
+  }
+}
+@keyframes slide-out {
+  to {
+    translate: calc(var(--direction) * -100%) 0;
+  }
+}
