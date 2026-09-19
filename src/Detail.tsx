@@ -33,12 +33,14 @@ export const Detail = ({ index, onSelect, onBack }: DetailProps) => {
         </button>
       </nav>
       {/*
-        key で切り替え前後の写真を別々にアニメーションさせる
+        key で写真を入れ替え、同じ name で新旧の figure を対応させる
+        Safari でも連続した切り替えで旧画像をスライドさせるため、name は固定する
         default は操作ごとの CSS クラス名を指定する
         next は右から、prev は左から表示
       */}
       <ViewTransition
         key={index}
+        name="detail"
         default={{ default: "auto", next: "slide-next", prev: "slide-prev" }}
       >
         <figure>
