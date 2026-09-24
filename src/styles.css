@@ -34,10 +34,8 @@ img {
       outline-offset: -6px;
       transition: outline-color 200ms;
     }
-    @media (hover: hover) {
-      &:hover img {
-        outline-color: #111;
-      }
+    &:hover img {
+      outline-color: #111;
     }
   }
   span {
